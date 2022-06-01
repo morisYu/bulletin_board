@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/main/java/application/NoticeConsole.java=UTF-8
+encoding//src/main/java/application/UserApp.java=UTF-8
+encoding//src/main/java/dao/Create.java=UTF-8
+encoding//src/main/java/dao/Delete.java=UTF-8
+encoding//src/main/java/dao/NoticeService.java=UTF-8
+encoding//src/main/java/dao/Read.java=UTF-8
+encoding//src/main/java/dao/Update.java=UTF-8
+encoding//src/main/java/dto/Notice.java=UTF-8
