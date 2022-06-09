@@ -1,0 +1,1536 @@
+!SESSION 2022-06-08 20:10:37.325 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_202
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-06-08 20:11:16.113
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\morisYu'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2022-06-08 20:11:18.818
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 2.0.4.v20170307-1435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:93)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-06-08 20:21:10.650
+!MESSAGE Connection to http://jope.ow2.org/update/jope/site.xml failed on jope.ow2.org. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: jope.ow2.org
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-06-08 20:21:10.857
+!MESSAGE Connection to http://jope.ow2.org/update/jope/p2.index failed on jope.ow2.org. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: jope.ow2.org
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2022-06-08 20:21:36.465
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2022-06-08 20:21:36.465
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-06-08 20:22:08.184
+!MESSAGE Connection to http://jope.ow2.org/update/jope/site.xml failed on jope.ow2.org. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: jope.ow2.org
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-06-08 20:22:08.388
+!MESSAGE Connection to http://jope.ow2.org/update/jope/p2.index failed on jope.ow2.org. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: jope.ow2.org
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-08 20:35:52.921
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-08 20:35:52.922
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-08 20:36:59.809
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-08 20:36:59.810
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+!SESSION 2022-06-08 20:39:54.626 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_202
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-06-08 20:40:00.287
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\morisYu'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2022-06-08 20:40:02.929
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 2.0.4.v20170307-1435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:93)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.jdt.junit 4 4 2022-06-08 20:40:50.351
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: The test run could not be imported from file 'D:\Project01(게시판)\bulletin_board\board02\jsp_board01\WebContent\web.xml'.
+	at org.eclipse.jdt.internal.junit.model.JUnitModel.throwImportError(JUnitModel.java:555)
+	at org.eclipse.jdt.internal.junit.model.JUnitModel.importTestRunSession(JUnitModel.java:396)
+	at org.eclipse.jdt.internal.junit.ui.JUnitViewEditorLauncher.open(JUnitViewEditorLauncher.java:28)
+	at org.eclipse.ui.internal.WorkbenchPage$31.run(WorkbenchPage.java:5384)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openExternalEditor(WorkbenchPage.java:5375)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3253)
+	at org.eclipse.ui.internal.WorkbenchPage.access$25(WorkbenchPage.java:3176)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:3158)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3153)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3117)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3107)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:563)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:518)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:360)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:167)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:256)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:221)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:271)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:249)
+	at org.eclipse.jdt.internal.ui.navigator.OpenAndExpand.run(OpenAndExpand.java:50)
+	at org.eclipse.ui.actions.RetargetAction.run(RetargetAction.java:225)
+	at org.eclipse.ui.navigator.CommonNavigatorManager$2.open(CommonNavigatorManager.java:191)
+	at org.eclipse.ui.OpenAndLinkWithEditorHelper$InternalListener.open(OpenAndLinkWithEditorHelper.java:46)
+	at org.eclipse.jface.viewers.StructuredViewer$2.run(StructuredViewer.java:855)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.StructuredViewer.fireOpen(StructuredViewer.java:852)
+	at org.eclipse.jface.viewers.StructuredViewer.handleOpen(StructuredViewer.java:1169)
+	at org.eclipse.ui.navigator.CommonViewer.handleOpen(CommonViewer.java:451)
+	at org.eclipse.jface.util.OpenStrategy.fireOpenEvent(OpenStrategy.java:278)
+	at org.eclipse.jface.util.OpenStrategy.access$2(OpenStrategy.java:272)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:313)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+Caused by: org.xml.sax.SAXParseException; systemId: file:/D:/Project01(%EA%B2%8C%EC%8B%9C%ED%8C%90)/bulletin_board/board02/jsp_board01/WebContent/web.xml; lineNumber: 1; columnNumber: 39; 예기치 않은 파일의 끝입니다.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1472)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:1014)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at javax.xml.parsers.SAXParser.parse(SAXParser.java:328)
+	at org.eclipse.jdt.internal.junit.model.JUnitModel.importTestRunSession(JUnitModel.java:389)
+	... 59 more
+!SUBENTRY 1 org.eclipse.jdt.junit.core 4 0 2022-06-08 20:40:50.352
+!MESSAGE The test run could not be imported from file 'D:\Project01(게시판)\bulletin_board\board02\jsp_board01\WebContent\web.xml'.
+!STACK 0
+org.xml.sax.SAXParseException; systemId: file:/D:/Project01(%EA%B2%8C%EC%8B%9C%ED%8C%90)/bulletin_board/board02/jsp_board01/WebContent/web.xml; lineNumber: 1; columnNumber: 39; 예기치 않은 파일의 끝입니다.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1472)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:1014)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at javax.xml.parsers.SAXParser.parse(SAXParser.java:328)
+	at org.eclipse.jdt.internal.junit.model.JUnitModel.importTestRunSession(JUnitModel.java:389)
+	at org.eclipse.jdt.internal.junit.ui.JUnitViewEditorLauncher.open(JUnitViewEditorLauncher.java:28)
+	at org.eclipse.ui.internal.WorkbenchPage$31.run(WorkbenchPage.java:5384)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openExternalEditor(WorkbenchPage.java:5375)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3253)
+	at org.eclipse.ui.internal.WorkbenchPage.access$25(WorkbenchPage.java:3176)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:3158)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3153)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3117)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3107)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:563)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:518)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:360)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:167)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:256)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:221)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:271)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:249)
+	at org.eclipse.jdt.internal.ui.navigator.OpenAndExpand.run(OpenAndExpand.java:50)
+	at org.eclipse.ui.actions.RetargetAction.run(RetargetAction.java:225)
+	at org.eclipse.ui.navigator.CommonNavigatorManager$2.open(CommonNavigatorManager.java:191)
+	at org.eclipse.ui.OpenAndLinkWithEditorHelper$InternalListener.open(OpenAndLinkWithEditorHelper.java:46)
+	at org.eclipse.jface.viewers.StructuredViewer$2.run(StructuredViewer.java:855)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.StructuredViewer.fireOpen(StructuredViewer.java:852)
+	at org.eclipse.jface.viewers.StructuredViewer.handleOpen(StructuredViewer.java:1169)
+	at org.eclipse.ui.navigator.CommonViewer.handleOpen(CommonViewer.java:451)
+	at org.eclipse.jface.util.OpenStrategy.fireOpenEvent(OpenStrategy.java:278)
+	at org.eclipse.jface.util.OpenStrategy.access$2(OpenStrategy.java:272)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:313)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-08 20:46:00.353
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-08 20:46:00.353
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.ui 4 4 2022-06-08 20:46:04.505
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.xsd.impl.XSDConcreteComponentImpl.getContentNodes(XSDConcreteComponentImpl.java:906)
+	at org.eclipse.xsd.impl.XSDConcreteComponentImpl.reconcileContents(XSDConcreteComponentImpl.java:921)
+	at org.eclipse.xsd.impl.XSDConcreteComponentImpl.reconcile(XSDConcreteComponentImpl.java:895)
+	at org.eclipse.xsd.impl.XSDConcreteComponentImpl.elementChanged(XSDConcreteComponentImpl.java:415)
+	at org.eclipse.wst.xsd.ui.internal.text.XSDModelDelayedReconciler$ReconcilerJob.reconcile(XSDModelDelayedReconciler.java:186)
+	at org.eclipse.wst.xsd.ui.internal.text.XSDModelDelayedReconciler$ReconcilerJob.reconcile(XSDModelDelayedReconciler.java:176)
+	at org.eclipse.wst.xsd.ui.internal.text.XSDModelDelayedReconciler$ReconcilerJob.runInUIThread(XSDModelDelayedReconciler.java:161)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4211)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3827)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.ui 4 4 2022-06-08 21:11:23.591
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.xsd.impl.XSDConcreteComponentImpl.getContentNodes(XSDConcreteComponentImpl.java:906)
+	at org.eclipse.xsd.impl.XSDConcreteComponentImpl.reconcileContents(XSDConcreteComponentImpl.java:921)
+	at org.eclipse.xsd.impl.XSDConcreteComponentImpl.reconcile(XSDConcreteComponentImpl.java:895)
+	at org.eclipse.xsd.impl.XSDConcreteComponentImpl.elementChanged(XSDConcreteComponentImpl.java:415)
+	at org.eclipse.wst.xsd.ui.internal.text.XSDModelDelayedReconciler$ReconcilerJob.reconcile(XSDModelDelayedReconciler.java:186)
+	at org.eclipse.wst.xsd.ui.internal.text.XSDModelDelayedReconciler$ReconcilerJob.reconcile(XSDModelDelayedReconciler.java:176)
+	at org.eclipse.wst.xsd.ui.internal.text.XSDModelDelayedReconciler$ReconcilerJob.runInUIThread(XSDModelDelayedReconciler.java:161)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4211)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3827)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-08 21:13:42.088
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-08 21:13:42.088
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-08 21:14:45.866
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-08 21:14:45.866
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-06-08 21:15:14.447
+!MESSAGE The server cannot be started because one or more of the ports are invalid. Open the server editor and correct the invalid ports.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-06-08 21:15:44.008
+!MESSAGE The server cannot be started because one or more of the ports are invalid. Open the server editor and correct the invalid ports.
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-08 21:34:05.223
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-08 21:34:05.224
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-08 21:34:05.265
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-08 21:34:05.266
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-06-08 21:47:03.845
+!MESSAGE Failed to download org.eclipse.recommenders:index::zip:0.0.0
+!STACK 0
+org.eclipse.aether.resolution.ArtifactResolutionException: Could not find artifact org.eclipse.recommenders:index:zip:0.0.0-SNAPSHOT in models (http://download.eclipse.org/recommenders/models/neon/)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:444)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:246)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:223)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact(DefaultRepositorySystem.java:294)
+	at org.eclipse.recommenders.models.ModelRepository.resolveInternal(ModelRepository.java:193)
+	at org.eclipse.recommenders.models.ModelRepository.resolve(ModelRepository.java:172)
+	at org.eclipse.recommenders.internal.models.rcp.EclipseModelRepository.resolve(EclipseModelRepository.java:169)
+	at org.eclipse.recommenders.internal.models.rcp.DownloadModelArchiveJob.run(DownloadModelArchiveJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find artifact org.eclipse.recommenders:index:zip:0.0.0-SNAPSHOT in models (http://download.eclipse.org/recommenders/models/neon/)
+	at org.eclipse.aether.connector.basic.ArtifactTransportListener.transferFailed(ArtifactTransportListener.java:39)
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:355)
+	at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:67)
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$DirectExecutor.execute(BasicRepositoryConnector.java:581)
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector.get(BasicRepositoryConnector.java:249)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:520)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:421)
+	... 8 more
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2022-06-08 21:47:03.846
+!MESSAGE org.eclipse.recommenders:index::zip:0.0.0 could not be resolved from the model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2022-06-08 22:09:39.587
+!MESSAGE Full project indexing required:
+  [+] C:\Program Files (x86)\MySQL\Connector J 8.0\mysql-connector-java-8.0.29.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\annotations-api.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-ant.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-ha.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-ssi.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-storeconfig.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-tribes.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\ecj-4.20.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\el-api.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jasper-el.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jasper.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jaspic-api.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jsp-api.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\servlet-api.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-api.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-coyote.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-dbcp.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-i18n-cs.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-i18n-de.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-i18n-es.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-i18n-fr.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-i18n-ja.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-i18n-ko.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-i18n-pt-BR.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-i18n-ru.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-i18n-zh-CN.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-jdbc.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-jni.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-util-scan.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-util.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-websocket.jar
+  [+] C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\websocket-api.jar
+  [+] C:\Program Files\Java\jdk1.8.0_202\jre\lib\charsets.jar
+  [+] C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\access-bridge-64.jar
+  [+] C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\cldrdata.jar
+  [+] C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\dnsns.jar
+  [+] C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\jaccess.jar
+  [+] C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\jfxrt.jar
+  [+] C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\localedata.jar
+  [+] C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\nashorn.jar
+  [+] C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunec.jar
+  [+] C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunjce_provider.jar
+  [+] C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunmscapi.jar
+  [+] C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunpkcs11.jar
+  [+] C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\zipfs.jar
+  [+] C:\Program Files\Java\jdk1.8.0_202\jre\lib\jce.jar
+  [+] C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfr.jar
+  [+] C:\Program Files\Java\jdk1.8.0_202\jre\lib\jsse.jar
+  [+] C:\Program Files\Java\jdk1.8.0_202\jre\lib\resources.jar
+  [+] C:\Program Files\Java\jdk1.8.0_202\jre\lib\rt.jar
+  [+] D:\Project01(게시판)\bulletin_board\board02\jsp_board01\WebContent\WEB-INF\lib\mysql-connector-java-8.0.29.jar
+  [+] D:\Project01(게시판)\bulletin_board\board02\jsp_board01\WebContent\WEB-INF\lib\tomcat-dbcp.jar
+  [+] D:\Project01(게시판)\bulletin_board\board02\jsp_board01\WebContent\WEB-INF\lib\tomcat-dbcp.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:169)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:42.565
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\annotations-api.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\annotations-api.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:42.566
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\annotations-api.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:42.685
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-ha.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-ha.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:42.686
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-ha.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:42.750
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-ssi.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-ssi.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:42.750
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-ssi.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:42.794
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-storeconfig.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-storeconfig.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:42.794
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-storeconfig.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:42.848
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-tribes.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-tribes.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:42.848
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-tribes.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:42.993
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:42.993
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:43.956
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\el-api.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\el-api.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:43.957
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\el-api.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:44.007
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jasper-el.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jasper-el.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:44.007
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jasper-el.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:44.148
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jasper.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jasper.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:44.148
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jasper.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:44.262
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jaspic-api.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jaspic-api.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:44.263
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jaspic-api.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:44.318
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jsp-api.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jsp-api.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:44.318
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jsp-api.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:44.372
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\servlet-api.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\servlet-api.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:44.372
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\servlet-api.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:44.421
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-api.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-api.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:44.422
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-api.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:44.459
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-coyote.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-coyote.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:44.459
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-coyote.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:44.743
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-dbcp.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-dbcp.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:44.743
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-dbcp.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:45.331
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-jni.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-jni.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:45.331
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-jni.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:45.447
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-util-scan.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-util-scan.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:45.447
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-util-scan.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:45.517
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-util.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-util.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:45.517
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-util.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:45.592
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-websocket.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-websocket.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:45.592
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-websocket.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:45.661
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\websocket-api.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\websocket-api.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:45.662
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\websocket-api.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:57.106
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in D:\Project01(게시판)\bulletin_board\board02\jsp_board01\WebContent\WEB-INF\lib\tomcat-dbcp.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in D:\Project01(게시판)\bulletin_board\board02\jsp_board01\WebContent\WEB-INF\lib\tomcat-dbcp.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:57.106
+!MESSAGE module-info [in module-info.class [in <default> [in D:\Project01(게시판)\bulletin_board\board02\jsp_board01\WebContent\WEB-INF\lib\tomcat-dbcp.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:09:57.181
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in WebContent/WEB-INF/lib/tomcat-dbcp.jar [in jsp_board01]]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in WebContent/WEB-INF/lib/tomcat-dbcp.jar [in jsp_board01]]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:09:57.181
+!MESSAGE module-info [in module-info.class [in <default> [in WebContent/WEB-INF/lib/tomcat-dbcp.jar [in jsp_board01]]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2022-06-08 22:42:17.723
+!MESSAGE Full project indexing required:
+  [+] D:\Project01(게시판)\bulletin_board\board02\jsp_board01\WebContent\WEB-INF\lib\jstl-1.2.jar
+  [+] D:\Project01(게시판)\bulletin_board\board02\jsp_board01\WebContent\WEB-INF\lib\tomcat-dbcp.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:169)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.suggestRebuild(ProjectTypesIndex.java:444)
+	at org.eclipse.recommenders.internal.types.rcp.TypesIndexService.rebuildIndex(TypesIndexService.java:120)
+	at org.eclipse.recommenders.internal.types.rcp.TypesIndexService.process(TypesIndexService.java:57)
+	at org.eclipse.recommenders.internal.types.rcp.TypesIndexService.process(TypesIndexService.java:63)
+	at org.eclipse.recommenders.internal.types.rcp.TypesIndexService.elementChanged(TypesIndexService.java:49)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1662)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1652)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1486)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1462)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2074)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:477)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2022-06-08 22:42:29.280
+!MESSAGE Full project indexing required:
+  [+] D:\Project01(게시판)\bulletin_board\board02\jsp_board01\WebContent\WEB-INF\lib\jstl-1.2.jar
+  [+] D:\Project01(게시판)\bulletin_board\board02\jsp_board01\WebContent\WEB-INF\lib\jstl-1.2.jar
+  [+] D:\Project01(게시판)\bulletin_board\board02\jsp_board01\WebContent\WEB-INF\lib\tomcat-dbcp.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:169)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.suggestRebuild(ProjectTypesIndex.java:444)
+	at org.eclipse.recommenders.internal.types.rcp.TypesIndexService.rebuildIndex(TypesIndexService.java:120)
+	at org.eclipse.recommenders.internal.types.rcp.TypesIndexService.process(TypesIndexService.java:57)
+	at org.eclipse.recommenders.internal.types.rcp.TypesIndexService.process(TypesIndexService.java:63)
+	at org.eclipse.recommenders.internal.types.rcp.TypesIndexService.elementChanged(TypesIndexService.java:49)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1662)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1652)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1486)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1462)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2074)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:477)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2253)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:795)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3097)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3059)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3071)
+	at org.eclipse.jdt.internal.corext.buildpath.ClasspathModifier.commitClassPath(ClasspathModifier.java:1045)
+	at org.eclipse.jdt.internal.ui.wizards.buildpaths.newsourcepage.AddSelectedLibraryToBuildpathAction.addLibraryEntries(AddSelectedLibraryToBuildpathAction.java:133)
+	at org.eclipse.jdt.internal.ui.wizards.buildpaths.newsourcepage.AddSelectedLibraryToBuildpathAction.access$0(AddSelectedLibraryToBuildpathAction.java:121)
+	at org.eclipse.jdt.internal.ui.wizards.buildpaths.newsourcepage.AddSelectedLibraryToBuildpathAction$1.run(AddSelectedLibraryToBuildpathAction.java:103)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:437)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:353)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:481)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:242)
+	at org.eclipse.ui.internal.progress.ProgressManager.run(ProgressManager.java:1074)
+	at org.eclipse.jdt.internal.ui.wizards.buildpaths.newsourcepage.AddSelectedLibraryToBuildpathAction.run(AddSelectedLibraryToBuildpathAction.java:110)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:565)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:397)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:24.796
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\annotations-api.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\annotations-api.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:24.796
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\annotations-api.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:24.868
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-ha.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-ha.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:24.868
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-ha.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:24.922
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-ssi.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-ssi.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:24.922
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-ssi.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:24.957
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-storeconfig.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-storeconfig.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:24.957
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-storeconfig.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:24.994
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-tribes.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-tribes.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:24.994
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina-tribes.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:25.103
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:25.104
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:25.833
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\el-api.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\el-api.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:25.833
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\el-api.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:25.879
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jasper-el.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jasper-el.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:25.879
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jasper-el.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:25.991
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jasper.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jasper.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:25.991
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jasper.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:26.136
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jaspic-api.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jaspic-api.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:26.136
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jaspic-api.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:26.170
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jsp-api.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jsp-api.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:26.170
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\jsp-api.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:26.212
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\servlet-api.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\servlet-api.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:26.212
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\servlet-api.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:26.255
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-api.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-api.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:26.255
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-api.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:26.289
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-coyote.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-coyote.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:26.289
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-coyote.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:26.481
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-dbcp.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-dbcp.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:26.481
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-dbcp.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:26.968
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-jni.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-jni.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:26.968
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-jni.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:27.097
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-util-scan.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-util-scan.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:27.097
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-util-scan.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:27.151
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-util.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-util.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:27.151
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-util.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:27.206
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-websocket.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-websocket.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:27.206
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-websocket.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:27.268
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\websocket-api.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\websocket-api.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:27.268
+!MESSAGE module-info [in module-info.class [in <default> [in C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\websocket-api.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:37.409
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in D:\Project01(게시판)\bulletin_board\board02\jsp_board01\WebContent\WEB-INF\lib\tomcat-dbcp.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in D:\Project01(게시판)\bulletin_board\board02\jsp_board01\WebContent\WEB-INF\lib\tomcat-dbcp.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:37.409
+!MESSAGE module-info [in module-info.class [in <default> [in D:\Project01(게시판)\bulletin_board\board02\jsp_board01\WebContent\WEB-INF\lib\tomcat-dbcp.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2022-06-08 22:55:37.581
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘module-info (not open) [in module-info.class [in <default> [in WebContent/WEB-INF/lib/tomcat-dbcp.jar [in jsp_board01]]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [module-info [in module-info.class [in <default> [in WebContent/WEB-INF/lib/tomcat-dbcp.jar [in jsp_board01]]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-06-08 22:55:37.581
+!MESSAGE module-info [in module-info.class [in <default> [in WebContent/WEB-INF/lib/tomcat-dbcp.jar [in jsp_board01]]]] does not exist
+!SESSION 2022-06-09 20:32:17.495 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_202
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-06-09 20:32:30.583
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\morisYu'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2022-06-09 20:32:33.022
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 2.0.4.v20170307-1435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:93)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-06-09 20:51:02.598
+!MESSAGE Several ports (8005, 8081) required by Tomcat v9.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-09 21:13:54.243
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-09 21:13:54.244
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+!SESSION 2022-06-09 21:16:42.137 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_202
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-06-09 21:16:48.534
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\morisYu'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2022-06-09 21:16:51.187
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 2.0.4.v20170307-1435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:93)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-09 21:28:42.357
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-09 21:28:42.357
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.ui 4 0 2022-06-09 21:31:15.924
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: assertion failed: 
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:110)
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:96)
+	at org.eclipse.jface.text.contentassist.CompletionProposal.<init>(CompletionProposal.java:72)
+	at org.eclipse.wst.sse.ui.internal.contentassist.CustomCompletionProposal.getSelection(CustomCompletionProposal.java:247)
+	at org.eclipse.wst.xml.ui.internal.contentassist.MarkupCompletionProposal.getSelection(MarkupCompletionProposal.java:130)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.insertProposal(CompletionProposalPopup.java:998)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.insertSelectedProposalWithMask(CompletionProposalPopup.java:938)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.verifyKey(CompletionProposalPopup.java:1388)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$InternalListener.verifyKey(ContentAssistant.java:803)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:485)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:66)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:802)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6044)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5733)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1130)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1126)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1547)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4918)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:364)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4799)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5110)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2552)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3822)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-09 21:49:27.148
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-09 21:49:27.149
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-09 22:18:07.647
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-09 22:18:07.647
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-09 22:18:07.661
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-06-09 22:18:07.661
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.recommenders.rcp 4 18 2022-06-09 22:44:41.561
+!MESSAGE Failed to resolve selection in ‘=jsp_board01/src<board{BoardDao.java’ at offset 4,786.
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelections.resolveJavaElementFromTypeRootInEditor(JavaElementSelections.java:164)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelections.resolveJavaElementFromEditor(JavaElementSelections.java:119)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelections.resolveJavaElementFromEditor(JavaElementSelections.java:102)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelectionService.handleSelectionInEditor(JavaElementSelectionService.java:108)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelectionService.access$1(JavaElementSelectionService.java:105)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelectionService$1.run(JavaElementSelectionService.java:82)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)

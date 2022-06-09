@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import="board.*" %>
+<%
+	BoardDao dao = new BoardDao();
+	List<BoardVo> ls = dao.selectAll();
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>목록</title>
+</head>
+<body>
+
+</body>
+</html>

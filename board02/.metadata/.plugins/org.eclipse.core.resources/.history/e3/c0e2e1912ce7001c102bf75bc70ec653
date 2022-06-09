@@ -1,0 +1,32 @@
+package board;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import dao.JdbcUtil;
+import dto.BoardVo;
+
+public class BoardDao {
+	private JdbcUtil ju;
+	
+	public int insert(BoardVo vo){
+		Connection con;
+		PreparedStatement pstmt;
+		String sql = "INSERT INTO board(title, writer, content) VALUES (?, ?, ?)";
+		int result = 0;
+		try{
+			con = ju.getConnection();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, vo.getTitle());
+			pstmt.setString(2, vo.getWriter());
+			pstmt.setString(3, vo.getContent());
+			result = pstmt.executeUpdate();
+			
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+}

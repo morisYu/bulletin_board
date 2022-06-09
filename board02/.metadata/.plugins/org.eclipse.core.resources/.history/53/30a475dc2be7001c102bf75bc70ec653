@@ -1,0 +1,12 @@
+package board;
+
+import dao.JdbcUtil;
+
+public class BoardDao {
+	private JdbcUtil ju;
+	
+	public int insert(BoardVo vo){
+		Connection con;
+		PreparedStatement pstmt;
+	}
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<display-name>board</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<resource-ref>
+		<description>DBCP</description>
+		<res-ref-name>jdbc/jsp_board01_DB</res-ref-name>
+	</resource-ref>
+
+</web-app>

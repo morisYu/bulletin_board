@@ -1,0 +1,60 @@
+package board;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import dao.JdbcUtil;
+import dto.BoardVo;
+
+public class BoardDao {
+	private JdbcUtil ju;
+	
+	public int insert(BoardVo vo){
+		Connection con;
+		PreparedStatement pstmt;
+		String sql = "INSERT INTO board(title, writer, content) VALUES (?, ?, ?)";
+		int result = -1;
+		try{
+			con = ju.getConnection();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, vo.getTitle());
+			pstmt.setString(2, vo.getWriter());
+			pstmt.setString(3, vo.getContent());
+			// 업데이트가 정상적으로 되면 1 이 반환됨
+			result = pstmt.executeUpdate();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	public List<BoardVo> selectAll(){
+		Connection con;
+		Statement stmt;
+		ResultSet rs;
+		String sql = "SELECT * FROM board";
+		
+		ArrayList<BoardVo> ls = new ArrayList<BoardVo>();
+		
+		try{
+			con = ju.getConnection();
+			stmt = con.createStatement();
+			rs = stmt.executeQuery(sql);
+			while(rs.next()){
+				BoardVo vo = new BoardVo(rs.getInt(1), rs.getString(2),	rs.getString(3),
+								rs.getString(4), new Date(rs.getDate(5).getTime()),
+								rs.getInt(6));
+				ls.add(vo);
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+	}
+}
